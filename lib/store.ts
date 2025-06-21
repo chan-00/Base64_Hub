@@ -1,5 +1,6 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
+import { type EncodingType } from './base64'
 
 interface ThemeState {
   isDark: boolean
@@ -24,7 +25,7 @@ interface HistoryItem {
   id: string
   input: string
   output: string
-  encoding: string
+  encoding: EncodingType
   isUrlSafe: boolean
   timestamp: number
 }

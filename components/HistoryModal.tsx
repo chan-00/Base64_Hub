@@ -1,12 +1,13 @@
 'use client'
 
 import { useHistoryStore } from '@/lib/store'
+import { type EncodingType } from '@/lib/base64'
 
 interface HistoryItem {
   id: string
   input: string
   output: string
-  encoding: string
+  encoding: EncodingType
   isUrlSafe: boolean
   timestamp: number
 }

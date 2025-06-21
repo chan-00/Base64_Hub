@@ -1,14 +1,20 @@
+import AdSense from './AdSense'
+
 export default function Footer() {
   return (
     <footer className="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* AdSense Placeholder - Top */}
+          {/* AdSense Banner - Top */}
           <div className="md:col-span-3">
-            <div className="bg-gray-100 dark:bg-gray-700 h-20 rounded-lg flex items-center justify-center">
-              <span className="text-gray-500 dark:text-gray-400 text-sm">
-                Google AdSense 배너 영역
-              </span>
+            <div className="bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center min-h-[90px]">
+              <AdSense
+                client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || ''}
+                slot={process.env.NEXT_PUBLIC_ADSENSE_BANNER_SLOT || ''}
+                format="auto"
+                responsive={true}
+                className="w-full"
+              />
             </div>
           </div>
           
