@@ -6,4 +6,4 @@ User-agent: Mediapartners-Google
 Allow: /
 
 # Sitemap
-Sitemap: https://your-domain.vercel.app/sitemap.xml 
+Sitemap: https://base64hub-studio.vercel.app/sitemap.xml 
