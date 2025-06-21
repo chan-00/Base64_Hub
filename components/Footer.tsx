@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="md:col-span-3">
             <div className="bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center min-h-[90px]">
               <AdSense
-                client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || ''}
+                client="ca-pub-3750717920048892"
                 slot={process.env.NEXT_PUBLIC_ADSENSE_BANNER_SLOT || ''}
                 format="auto"
                 responsive={true}

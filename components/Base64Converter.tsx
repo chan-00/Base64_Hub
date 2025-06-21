@@ -323,7 +323,7 @@ export default function Base64Converter() {
           <div className="lg:col-span-1">
             <div className="bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center min-h-[400px]">
               <AdSense
-                client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || ''}
+                client="ca-pub-3750717920048892"
                 slot={process.env.NEXT_PUBLIC_ADSENSE_SIDEBAR_SLOT || ''}
                 format="auto"
                 responsive={true}
