@@ -4,7 +4,7 @@ import './globals.css'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import Script from 'next/script'
+import { Analytics } from '@vercel/analytics/next'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code', // Google Search Console에서 받은 인증 코드
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '',
   },
 }
 
@@ -51,15 +51,14 @@ export default function RootLayout({
   return (
     <html lang="ko" suppressHydrationWarning>
       <head>
-        {/* Google AdSense 스크립트 */}
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3750717920048892"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
-        {/* Google AdSense 크롤러 인식을 위한 메타 태그 */}
-        <meta name="google-site-verification" content="your-google-verification-code" />
+        {/* Favicon 및 아이콘 */}
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.svg" />
+        {/* Google Search Console 인증 메타 태그 */}
+        {process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION && (
+          <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION} />
+        )}
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />
       </head>
@@ -73,6 +72,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )

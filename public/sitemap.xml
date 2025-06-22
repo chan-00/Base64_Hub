@@ -13,9 +13,39 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://base64hub-studio.vercel.app/privacy</loc>
+    <loc>https://base64hub-studio.vercel.app/guide</loc>
     <lastmod>2024-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://base64hub-studio.vercel.app/about-us</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://base64hub-studio.vercel.app/contact</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://base64hub-studio.vercel.app/privacy</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://base64hub-studio.vercel.app/terms</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://base64hub-studio.vercel.app/cookies</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset> 

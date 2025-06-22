@@ -29,10 +29,22 @@ export default function Header() {
               Base64란?
             </Link>
             <Link 
-              href="/privacy" 
+              href="/guide" 
               className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
             >
-              개인정보처리방침
+              사용법 가이드
+            </Link>
+            <Link 
+              href="/about-us" 
+              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+            >
+              About Us
+            </Link>
+            <Link 
+              href="/contact" 
+              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+            >
+              문의하기
             </Link>
           </nav>
           

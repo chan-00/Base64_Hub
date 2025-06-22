@@ -39,6 +39,7 @@ npm start
 ## Vercel 배포
 
 1. **GitHub에 코드 푸시**
+
    ```bash
    git remote add origin https://github.com/yourusername/base64-hub.git
    git push -u origin main
@@ -53,34 +54,44 @@ npm start
 ## Google AdSense 설정
 
 ### 1. AdSense 계정 생성
+
 1. [Google AdSense](https://www.google.com/adsense)에 가입
 2. 사이트 승인 대기 (보통 1-2주 소요)
 
-### 2. 환경 변수 설정
+### 2. Google Search Console 설정
+
+1. [Google Search Console](https://search.google.com/search-console)에 가입
+2. 사이트 소유권 확인 (HTML 태그 방식 권장)
+3. 인증 코드를 복사하여 환경변수에 설정
+
+### 3. 환경 변수 설정
+
 Vercel 대시보드에서 환경 변수를 설정하세요:
 
 ```
+# AdSense 설정
 NEXT_PUBLIC_ADSENSE_CLIENT_ID=ca-pub-xxxxxxxxxxxxxxxx
 NEXT_PUBLIC_ADSENSE_BANNER_SLOT=xxxxxxxxxx
 NEXT_PUBLIC_ADSENSE_SIDEBAR_SLOT=xxxxxxxxxx
+NEXT_PUBLIC_ADSENSE_CONTENT_SLOT=xxxxxxxxxx
+
+# Google Search Console
+NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=xxxxxxxxxxxxxxxxxx
 ```
 
-### 3. 광고 슬롯 생성
+### 4. 광고 슬롯 생성
+
 AdSense 대시보드에서 다음 광고 슬롯을 생성하세요:
-- **배너 광고**: 페이지 하단
-- **사이드바 광고**: 메인 콘텐츠 옆
 
-### 4. 코드 업데이트
-환경 변수를 사용하도록 코드를 수정하세요:
+- **배너 광고**: 페이지 하단 (Footer)
+- **사이드바 광고**: 메인 콘텐츠 옆 (Sidebar)
+- **콘텐츠 광고**: 콘텐츠 중간 (Content)
 
-```typescript
-// layout.tsx
-client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID}
+### 5. 광고 배치 최적화
 
-// Footer.tsx & Base64Converter.tsx
-client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID}
-slot={process.env.NEXT_PUBLIC_ADSENSE_BANNER_SLOT}
-```
+- 콘텐츠와 광고 비율: 70:30 권장
+- 사용자 경험을 해치지 않는 위치에 배치
+- 모바일에서도 적절히 표시되는지 확인
 
 ## 프로젝트 구조
 
@@ -108,11 +119,13 @@ Base64_Studio/
 ## 수익화 전략
 
 ### 광고 배치
+
 1. **페이지 하단 배너**: 높은 노출률
 2. **사이드바 광고**: 콘텐츠와 분리된 위치
 3. **인라인 광고**: 콘텐츠 중간 삽입 (선택사항)
 
 ### 수익 최적화
+
 - **A/B 테스트**: 다양한 광고 위치 테스트
 - **사용자 경험**: 과도한 광고 배치 지양
 - **콘텐츠 품질**: 유용한 기능으로 사용자 유지
@@ -127,4 +140,4 @@ MIT License
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request 
+5. Open a Pull Request

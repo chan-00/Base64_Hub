@@ -111,6 +111,45 @@ export default function AboutPage() {
               URL-safe 옵션을 지원하여 더욱 편리하게 사용할 수 있습니다.
             </p>
           </div>
+
+          <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
+            Base64의 역사와 배경
+          </h2>
+          <p className="text-gray-600 dark:text-gray-300 mb-6">
+            Base64는 1980년대 이메일 시스템(MIME)에서 바이너리 파일을 안전하게 전송하기 위해 고안되었습니다. 이후 웹, 데이터베이스, 인증(JWT) 등 다양한 분야에서 표준으로 자리잡았습니다.
+          </p>
+          <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
+            보안 이슈와 주의사항
+          </h2>
+          <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6 space-y-2">
+            <li>Base64는 암호화가 아니므로 민감한 정보 보호에는 적합하지 않습니다.</li>
+            <li>누구나 쉽게 디코딩할 수 있으므로 개인정보, 비밀번호 등은 반드시 암호화 후 사용하세요.</li>
+            <li>대용량 파일을 Base64로 변환하면 데이터 크기가 커져 성능 저하가 발생할 수 있습니다.</li>
+          </ul>
+          <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
+            활용 팁
+          </h2>
+          <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6 space-y-2">
+            <li>이미지, 파일을 HTML/CSS에 직접 삽입할 때 data URI로 활용할 수 있습니다.</li>
+            <li>API 통신 시 바이너리 데이터를 안전하게 전송할 수 있습니다.</li>
+            <li>JWT, OAuth 등 인증 토큰에서 Base64가 널리 사용됩니다.</li>
+          </ul>
+          <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
+            추가 FAQ
+          </h2>
+          <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6 space-y-2">
+            <li><strong>Q. Base64는 어디서 표준화되었나요?</strong><br/>A. IETF RFC 4648에서 표준으로 정의되어 있습니다.</li>
+            <li><strong>Q. Base64로 인코딩된 데이터는 어떻게 디코딩하나요?</strong><br/>A. 대부분의 프로그래밍 언어에서 내장 함수로 지원합니다. 예: atob/btoa(JavaScript), base64 모듈(Python) 등</li>
+            <li><strong>Q. Base64와 비슷한 인코딩 방식이 있나요?</strong><br/>A. Base32, Base58, Base91 등 다양한 변형이 존재합니다.</li>
+          </ul>
+          <h2 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-4">
+            참고 자료
+          </h2>
+          <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 mb-6 space-y-2">
+            <li><a href="https://ko.wikipedia.org/wiki/Base64" target="_blank" rel="noopener">Base64 - 위키백과</a></li>
+            <li><a href="https://datatracker.ietf.org/doc/html/rfc4648" target="_blank" rel="noopener">RFC 4648 (Base64 표준)</a></li>
+            <li><a href="https://developer.mozilla.org/ko/docs/Glossary/Base64" target="_blank" rel="noopener">MDN Web Docs - Base64</a></li>
+          </ul>
         </div>
       </div>
     </div>
